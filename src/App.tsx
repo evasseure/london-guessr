@@ -54,7 +54,7 @@ export function App() {
   const showAwserHint = (hint: string, x: number, y: number) => {
     const svgElement = d3.select(mapRef.current);
 
-    const b = svgElement
+    const container = svgElement
       .append("foreignObject")
       .attr("x", x)
       .attr("y", y - 30)
@@ -63,13 +63,14 @@ export function App() {
       .style("opacity", 0)
       .style("pointer-events", "none");
 
-    const d = b.append("xhtml:div").attr("class", "hint-label").html(`<span>${hint}</span>`);
+    const label = container.append("xhtml:div").attr("class", "hint-label").html(`<span>${hint}</span>`);
 
-    const bb = d.node().getBoundingClientRect();
-    b.attr("x", x - bb.width / 2);
-    b.attr("width", bb.width);
-
-    b.transition()
+    // Forcing non null, since there is not reason it could be null.
+    const boundingRect = (label!.node()! as Element).getBoundingClientRect();
+    container.attr("x", x - boundingRect.width / 2);
+    container.attr("width", boundingRect.width);
+    container
+      .transition()
       .duration(500)
       .style("opacity", 1)
       .transition()
@@ -85,7 +86,10 @@ export function App() {
     if (mapZoneRed.current) {
       const mapContainer = mapZoneRed.current as HTMLDivElement;
       const boundingBox = mapContainer.getBoundingClientRect();
-      projection.fitSize([boundingBox.width - 64, boundingBox.height], mapData); // 64 to compensate for the css padding
+
+      // 64 to compensate for the css padding.
+      // Casting to any because the json is not exactly as fitSize expect.
+      projection.fitSize([boundingBox.width - 64, boundingBox.height], mapData as any);
     }
 
     let geoGenerator = d3.geoPath().projection(projection);
@@ -94,7 +98,8 @@ export function App() {
       .selectAll("path")
       .data(mapData.features)
       .join("path")
-      .attr("d", geoGenerator)
+      // Casting to any because D3 typings are weird
+      .attr("d", geoGenerator as any)
       .style("fill", (d) => {
         if (d.properties.ignore) return MAP_COLORS.IGNORED.fill;
         return MAP_COLORS[getZoneStatus(d.properties.id)].fill;
