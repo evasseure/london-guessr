@@ -12,7 +12,11 @@ export function App() {
   const mapZoneRed = useRef(null);
 
   const [questions, setQuestions] = useState<Question[]>(
-    mapData.features.filter((f) => !f.properties.ignore).map((f) => ({ id: f.properties.id, name: f.properties.name }))
+    d3.shuffle(
+      mapData.features
+        .filter((f) => !f.properties.ignore)
+        .map((f) => ({ id: f.properties.id, name: f.properties.name }))
+    )
   );
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [triesCounter, setTriesCounter] = useState<number>(0);
