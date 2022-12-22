@@ -20,6 +20,7 @@ export function App() {
   );
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [triesCounter, setTriesCounter] = useState<number>(0);
+  const [timer, setTimer] = useState<number>(0);
 
   const jumpToNextQuestion = () => {
     const newArray = questions.slice(1);
@@ -35,7 +36,7 @@ export function App() {
         switch (triesCounter + 1) {
           case 1:
             return "CORRECT";
-          case ALLOWED_TRIES + 1:
+          case ALLOWED_TRIES:
             return "FAILED";
           default:
             return "MEH";
@@ -133,6 +134,12 @@ export function App() {
       });
   });
 
+  useEffect(() => {
+    const interval = setInterval(() => setTimer(timer + 1), 1000);
+
+    return () => clearInterval(interval);
+  }, [timer]);
+
   return (
     <div className={styles.app}>
       <div className={styles.sideBar}>
@@ -163,6 +170,20 @@ export function App() {
         </div>
       </div>
       <div className={styles.mapContainer} ref={mapZoneRed}>
+        <div className={styles.statsBar}>
+          <div>
+            <span className={styles.clock}>🕒</span>
+            {[Math.floor(timer / 60), timer % 60 < 10 ? "0" + (timer % 60) : timer % 60].join(":")}
+          </div>
+          <div className={styles.lives}>
+            {[...Array(triesCounter).keys()].map((i) => (
+              <span key={"bheart-" + i}>🖤</span>
+            ))}
+            {[...Array(ALLOWED_TRIES - triesCounter).keys()].map((i) => (
+              <span key={"rheart-" + i}>❤️</span>
+            ))}
+          </div>
+        </div>
         <svg width="100%" height="100%" ref={mapRef}></svg>
       </div>
     </div>
