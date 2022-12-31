@@ -1,18 +1,35 @@
 # LondonGuessr
 
-### Datasets
+A little game to learn the London boroughs.
 
-- `data.json` is the one the app reads from
-- `london-boroughs.json` is the complete London boroughs
-- `inner-london-ignores.json` is the same as complete London boroughs, but with added `ignore: true` tags to the boroughs outside of inner London
-- `inner-london.json` is the inner London boroughs
+### More maps
+
+This could easily be adapted to use other maps, but I decided to focus on London.
+
+### Routes
+
+- `/` the "game"
+- `/render` helper route to transform the geojson to a svg. I could also have rendered the geojson directly, but using a simple svg was nicer.
+
+### Running the project
+
+- `npm install`
+- `npm start`
+
+### Data files
+
+- `london-map.svg` the London boroughs svg map
+- `boroughs.json` contains the questions data
+- `london-boroughs-geojson.json` the complete London boroughs geo-json
 
 ### Todo
 
-- [ ] Timer
-- [ ] Tries counter display
-- [ ] End state
-- [ ] Restart
-- [ ] Change dataset
-- [ ] Don't redraw everything at every render
+- [ ] Fix zone hint labels centering
+- [ ] Code cleanup
 - [ ] Responsivity?
+- [x] When click correct on last life, should be yellow
+- [x] End state
+- [x] Timer
+- [x] Tries counter display
+- [x] Change dataset
+- [x] Don't redraw everything at every render

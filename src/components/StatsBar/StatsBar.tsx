@@ -1,4 +1,4 @@
-import styles from "./StatsBar.module.css";
+import * as styles from "./StatsBar.module.css";
 
 type StatsBarProps = {
   timer: number;

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as d3 from "d3";
-import styles from "./App.module.css";
+import * as styles from "./App.module.css";
 import { MAP_COLORS } from "./colors";
 import StatsBar from "./components/StatsBar";
 import BOROUGHS from "./data/boroughs.json";
