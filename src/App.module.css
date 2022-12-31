@@ -8,17 +8,53 @@
   position: relative;
   overflow: hidden;
   border-right: 5px dotted #cfdeec;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   padding: 32px;
   font-size: 3rem;
   margin: 0;
-  /* box-shadow: 4px 4px 4px 6px rgb(0 0 0 / 15%); */
+}
+
+.dataOptions {
+  margin: 0 32px;
+}
+
+.dataOptionsOptions {
+  display: flex;
+  column-gap: 8px;
+}
+
+.dataOption {
+  text-align: center;
+  background: #fff;
+  border: 2px solid #000;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0 16px;
+  font-size: 1.1rem;
+  display: flex;
+  box-shadow: 6px 6px #000;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+
+.dataOption:hover,
+.enabled {
+  background: hsl(195deg 67% 64%);
+  box-shadow: 3px 3px #000;
+  transform: translateY(3px);
 }
 
 .questions {
   margin: 0px 32px;
+  flex-grow: 1;
+  z-index: 2;
+  margin-bottom: 45px;
+  position: relative;
 }
 
 .questionLabel {
@@ -65,6 +101,7 @@
   left: 32px;
   right: 32px;
   box-shadow: 6px 6px #000;
+  z-index: 2;
 }
 
 .mapContainer {
@@ -72,23 +109,4 @@
   padding: 32px;
   height: 97vh;
   position: relative;
-}
-
-.statsBar {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.5rem;
-  position: absolute;
-  left: 32px;
-  right: 32px;
-  padding-top: 18px;
-}
-
-.clock {
-  margin-right: 12px;
-}
-
-.lives {
-  display: flex;
-  column-gap: 4px;
 }

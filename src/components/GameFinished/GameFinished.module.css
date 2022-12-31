@@ -1,0 +1,29 @@
+.gameFinishedContainer {
+  height: 200px;
+  background: #fff;
+  border: 2px solid #000;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  display: flex;
+  box-shadow: 6px 6px 0px 0px rgb(0 0 0);
+  padding: 0px 16px;
+  text-align: center;
+  margin: 32px;
+  flex-direction: column;
+}
+
+.gameFinishButton {
+  text-align: center;
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #000;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 8px 36px;
+  font-size: 1.1rem;
+  transition: all 0.2s linear;
+  display: flex;
+  border-radius: 50px;
+}

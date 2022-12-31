@@ -1,7 +1,7 @@
 export const MAP_COLORS = {
   HOVER: {
     fill: "hsl(196deg 67% 40%)",
-    stroke: "hsl(12deg 67% 40%)",
+    stroke: "hsl(196deg 73% 13%)",
   },
   IGNORED: {
     fill: "hsl(209deg 100% 98%)",
