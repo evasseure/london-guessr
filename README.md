@@ -1,3 +1,5 @@
+![a screenshot of the app](./screenshot.png)
+
 # LondonGuessr
 
 A little game to learn the London boroughs.
@@ -27,6 +29,7 @@ This could easily be adapted to use other maps, but I decided to focus on London
 - [ ] Fix zone hint labels centering
 - [ ] Code cleanup
 - [ ] Responsivity?
+- [ ] Favicon
 - [x] When click correct on last life, should be yellow
 - [x] End state
 - [x] Timer
