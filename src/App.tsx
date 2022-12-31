@@ -26,9 +26,18 @@ export function App() {
   const gameFinished = questionIndex === questions.length;
 
   const resetGame = () => {
-    setQuestions(
-      d3.shuffle(BOROUGHS.filter((b) => (onlyInner ? b.inner : true)).map((q) => ({ ...q, status: "AWAITING" })))
-    );
+    let questions = BOROUGHS.filter((b) => (onlyInner ? b.inner : true)).map((q) => ({
+      ...q,
+      status: "AWAITING" as Question["status"],
+    }));
+
+    // Shuffling the array
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [questions[i], questions[j]] = [questions[j], questions[i]];
+    }
+
+    setQuestions(questions);
     setTriesCounter(0);
     setTimer(0);
     setQuestionIndex(0);
