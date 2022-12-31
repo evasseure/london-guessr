@@ -28,8 +28,9 @@ This could easily be adapted to use other maps, but I decided to focus on London
 
 - [ ] Fix zone hint labels centering
 - [ ] Code cleanup
+- [ ] Tests (if I go any further with the project)
 - [ ] Responsivity?
-- [ ] Favicon
+- [x] Favicon
 - [x] When click correct on last life, should be yellow
 - [x] End state
 - [x] Timer
