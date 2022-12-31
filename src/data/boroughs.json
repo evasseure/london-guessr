@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Kingston upon Thames",
+    "inner": false
+  },
+  {
+    "id": 2,
+    "name": "Croydon",
+    "inner": false
+  },
+  {
+    "id": 3,
+    "name": "Bromley",
+    "inner": false
+  },
+  {
+    "id": 4,
+    "name": "Hounslow",
+    "inner": false
+  },
+  {
+    "id": 5,
+    "name": "Ealing",
+    "inner": false
+  },
+  {
+    "id": 6,
+    "name": "Havering",
+    "inner": false
+  },
+  {
+    "id": 7,
+    "name": "Hillingdon",
+    "inner": false
+  },
+  {
+    "id": 8,
+    "name": "Harrow",
+    "inner": false
+  },
+  {
+    "id": 9,
+    "name": "Brent",
+    "inner": false
+  },
+  {
+    "id": 10,
+    "name": "Barnet",
+    "inner": false
+  },
+  {
+    "id": 11,
+    "name": "Lambeth",
+    "inner": true
+  },
+  {
+    "id": 12,
+    "name": "Southwark",
+    "inner": true
+  },
+  {
+    "id": 13,
+    "name": "Lewisham",
+    "inner": true
+  },
+  {
+    "id": 14,
+    "name": "Greenwich",
+    "inner": false
+  },
+  {
+    "id": 15,
+    "name": "Bexley",
+    "inner": false
+  },
+  {
+    "id": 16,
+    "name": "Enfield",
+    "inner": false
+  },
+  {
+    "id": 17,
+    "name": "Waltham Forest",
+    "inner": false
+  },
+  {
+    "id": 18,
+    "name": "Redbridge",
+    "inner": false
+  },
+  {
+    "id": 19,
+    "name": "Sutton",
+    "inner": false
+  },
+  {
+    "id": 20,
+    "name": "Richmond upon Thames",
+    "inner": false
+  },
+  {
+    "id": 21,
+    "name": "Merton",
+    "inner": false
+  },
+  {
+    "id": 22,
+    "name": "Wandsworth",
+    "inner": true
+  },
+  {
+    "id": 23,
+    "name": "Hammersmith and Fulham",
+    "inner": true
+  },
+  {
+    "id": 24,
+    "name": "Kensington and Chelsea",
+    "inner": true
+  },
+  {
+    "id": 25,
+    "name": "Westminster",
+    "inner": true
+  },
+  {
+    "id": 26,
+    "name": "Camden",
+    "inner": true
+  },
+  {
+    "id": 27,
+    "name": "Tower Hamlets",
+    "inner": true
+  },
+  {
+    "id": 28,
+    "name": "Islington",
+    "inner": true
+  },
+  {
+    "id": 29,
+    "name": "Hackney",
+    "inner": true
+  },
+  {
+    "id": 30,
+    "name": "Haringey",
+    "inner": true
+  },
+  {
+    "id": 31,
+    "name": "Newham",
+    "inner": true
+  },
+  {
+    "id": 32,
+    "name": "Barking and Dagenham",
+    "inner": false
+  },
+  {
+    "id": 33,
+    "name": "City of London",
+    "inner": true
+  }
+]
